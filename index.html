@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css"/>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="content">
+        <div class="centre-content">
+            <h1>Month Wise Data</h1>
+            <p class="scene-short"></p>
+            <div class="scene-content">
+                <svg>
+                </svg>
+                <div id="states" class="state-select display-none">
+                    <b>Select States : </b>
+                    <select multiple>                                           
+                    </select>
+                </div>
+                
+                <br/>
+                <b>Year : <span id="_yearValue">2022</span></b>
+                <input id="slide" type="range" min="2018" max="2022" step="1" value="2022" onchange="selectYear(this.value)">
+            </div>
+            <p class="scene-desc"></p>
+            <div class="next-scene" id="next" onclick="nextScene()">
+                <span>Next</span>
+            </div>
+            <div class="prev-scene display-none" id="prev" onclick="prevScene()">
+                <span>Prev</span>
+            </div>    
+            
+        </div>
+    </div>
+
+    <script src="js/scene_data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/scene1.js"></script>
+</body>
+</html>
